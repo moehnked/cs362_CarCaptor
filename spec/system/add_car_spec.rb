@@ -6,8 +6,8 @@ RSpec.describe "adding a car", type: :system do
     fill_in "Year", with: "1999"
     fill_in "Make", with: "Ford"
     fill_in "Model", with: "Mustang"
-    fill_in "Coolness_Value", with: "5"
-    click_on("Create Project")
+    fill_in "Coolness value", with: 5
+    click_on("Create Car")
     visit cars_path
     expect(page).to have_content(1999)
     expect(page).to have_content("Ford")

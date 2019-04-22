@@ -1,0 +1,17 @@
+<h1>New Car</h1>
+
+<%= form_for(@car) do |f| %>
+  <%= f.label(:year) %>
+  <%= f.number_field(:year) %>
+  <br />
+  <%= f.label(:make) %>
+  <%= f.text_field(:make) %>
+  <br />
+  <%= f.label(:model) %>
+  <%= f.text_field(:model) %>
+  <br />
+  <%= f.label(:coolness_value) %>
+  <%= f.number_field(:coolness_value) %>
+  <br />
+  <%= f.submit %>
+<% end %>
