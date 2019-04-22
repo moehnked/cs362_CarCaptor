@@ -9,4 +9,12 @@ RSpec.describe CreateCar do
     expect(creator.car.model).to eq("Thing")
     expect(creator.car.coolness_value).to eq(9)
   end
+  
+  describe "failure cases" do
+    it "fails when trying to save a car with no year" do
+      creator = CreateCar.new(year: nil, make: "Ford", model: "Thing", coolness_value: 9)
+      creator.create
+      expect(creator).not_to be_a_success
+    end
+  end
 end

@@ -392,3 +392,57 @@ Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.1ms)
   [1m[35m (0.9ms)[0m  [1m[31mrollback transaction[0m
   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
   [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/cars/new" for 127.0.0.1 at 2019-04-22 10:35:47 -0700
+Processing by CarsController#new as HTML
+  Rendering cars/new.html.erb within layouts/application
+  Rendered cars/new.html.erb within layouts/application (248.2ms)
+Completed 200 OK in 874ms (Views: 813.6ms | ActiveRecord: 0.7ms)
+Started POST "/cars" for 127.0.0.1 at 2019-04-22 10:35:48 -0700
+Processing by CarsController#create as HTML
+  Parameters: {"utf8"=>"✓", "car"=>{"year"=>"1999", "make"=>"Ford", "model"=>"Mustang", "coolness_value"=>"5"}, "commit"=>"Create Car"}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/cars/new" for 127.0.0.1 at 2019-04-22 10:36:52 -0700
+Processing by CarsController#new as HTML
+  Rendering cars/new.html.erb within layouts/application
+  Rendered cars/new.html.erb within layouts/application (50.2ms)
+Completed 200 OK in 445ms (Views: 384.5ms | ActiveRecord: 0.7ms)
+Started POST "/cars" for 127.0.0.1 at 2019-04-22 10:36:53 -0700
+Processing by CarsController#create as HTML
+  Parameters: {"utf8"=>"✓", "car"=>{"year"=>"1999", "make"=>"Ford", "model"=>"Mustang", "coolness_value"=>"5"}, "commit"=>"Create Car"}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCar Create (27.6ms)[0m  [1m[32mINSERT INTO "cars" ("year", "make", "model", "coolness_value", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["year", 1999], ["make", "Ford"], ["model", "Mustang"], ["coolness_value", 5], ["created_at", "2019-04-22 17:36:53.229104"], ["updated_at", "2019-04-22 17:36:53.229104"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://127.0.0.1/cars
+Completed 302 Found in 30ms (ActiveRecord: 27.7ms)
+Started GET "/cars" for 127.0.0.1 at 2019-04-22 10:36:53 -0700
+Processing by CarsController#index as HTML
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered cars/index.html.erb within layouts/application (25.4ms)
+Completed 200 OK in 109ms (Views: 26.6ms | ActiveRecord: 0.1ms)
+Started GET "/cars" for 127.0.0.1 at 2019-04-22 10:36:53 -0700
+Processing by CarsController#index as HTML
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered cars/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.1ms)
+  [1m[35m (2.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m

@@ -6,15 +6,22 @@ class CreateCar
     @make = make
     @model = model
     @coolness_value = coolness_value
+    @success = false
+  end
+  
+  def success?
+    @success
   end
   
   def build
     self.car = Car.new(year: year, make: make, model: model, coolness_value: coolness_value)
+    car
   end
   
   def create
     build
-    car.save
+    result = car.save
+    @success = result
   end
 
 end
