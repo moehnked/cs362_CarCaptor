@@ -11,5 +11,10 @@ class CreateCar
   def build
     self.car = Car.new(year: year, make: make, model: model, coolness_value: coolness_value)
   end
+  
+  def create
+    build
+    car.save
+  end
 
 end

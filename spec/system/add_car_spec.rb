@@ -1,7 +1,6 @@
 require "rails_helper"
 
-#RSpec.describe "adding a car", type: :system do
-RSpec.describe "adding a car", :skip do
+RSpec.describe "adding a car", type: :system do
   it "allows a user to create a car" do
     visit new_car_path
     fill_in "Year", with: "1999"
