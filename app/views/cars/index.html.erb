@@ -10,11 +10,11 @@
   </thead>
   <tbody>
     <% @cars.each do |car| %>
-      <tr>
-        <td><%= car.year %></td>
-        <td><%= car.make %></td>
-        <td><%= car.model %></td>
-        <td><%= car.coolness_value %></td>
+      <tr class="car-row" id="<%= dom_id(car) %>">
+        <td class="year"><%= car.year %></td>
+        <td class="make"><%= car.make %></td>
+        <td class="model"><%= car.model %></td>
+        <td class="coolness_value"><%= car.coolness_value %></td>
       </tr>
     <% end %>
   </tbody>

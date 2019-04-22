@@ -9,9 +9,15 @@ RSpec.describe "adding a car", type: :system do
     fill_in "Coolness value", with: 5
     click_on("Create Car")
     visit cars_path
-    expect(page).to have_content(1999)
-    expect(page).to have_content("Ford")
-    expect(page).to have_content("Mustang")
-    expect(page).to have_content(5)
+    @car = Car.find_by(model: "Mustang")
+    expect(page).to have_selector("#car_#{@car.id} .year", text: "1999")
+    expect(page).to have_selector("#car_#{@car.id} .make", text: "Ford")
+    expect(page).to have_selector("#car_#{@car.id} .model", text: "Mustang")
+    expect(page).to have_selector("#car_#{@car.id} .coolness_value", text: "5")
+    
+    # expect(page).to have_content(1999)
+    # expect(page).to have_content("Ford")
+    # expect(page).to have_content("Mustang")
+    # expect(page).to have_content(5)
   end
 end
