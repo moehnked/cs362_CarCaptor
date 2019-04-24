@@ -446,3 +446,229 @@ Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.1ms)
   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
   [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
   [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/cars/new" for 127.0.0.1 at 2019-04-23 23:11:16 -0700
+Processing by CarsController#new as HTML
+  Rendering cars/new.html.erb within layouts/application
+  Rendered cars/new.html.erb within layouts/application (41.9ms)
+Completed 200 OK in 508ms (Views: 493.9ms | ActiveRecord: 0.0ms)
+Started POST "/cars" for 127.0.0.1 at 2019-04-23 23:11:17 -0700
+Processing by CarsController#create as HTML
+  Parameters: {"utf8"=>"✓", "car"=>{"year"=>"1999", "make"=>"Ford", "model"=>"Mustang", "coolness_value"=>"5"}, "commit"=>"Create Car"}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCar Create (22.7ms)[0m  [1m[32mINSERT INTO "cars" ("year", "make", "model", "coolness_value", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["year", 1999], ["make", "Ford"], ["model", "Mustang"], ["coolness_value", 5], ["created_at", "2019-04-24 06:11:17.529054"], ["updated_at", "2019-04-24 06:11:17.529054"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://127.0.0.1/cars
+Completed 302 Found in 25ms (ActiveRecord: 22.8ms)
+Started GET "/cars" for 127.0.0.1 at 2019-04-23 23:11:17 -0700
+Processing by CarsController#index as HTML
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered cars/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 11ms (Views: 2.7ms | ActiveRecord: 0.1ms)
+Started GET "/cars" for 127.0.0.1 at 2019-04-23 23:11:17 -0700
+Processing by CarsController#index as HTML
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered cars/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/cars/new" for 127.0.0.1 at 2019-04-23 23:12:12 -0700
+Processing by CarsController#new as HTML
+  Rendering cars/new.html.erb within layouts/application
+  Rendered cars/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 139ms (Views: 132.5ms | ActiveRecord: 0.0ms)
+Started POST "/cars" for 127.0.0.1 at 2019-04-23 23:12:12 -0700
+Processing by CarsController#create as HTML
+  Parameters: {"utf8"=>"✓", "car"=>{"year"=>"1999", "make"=>"Ford", "model"=>"Mustang", "coolness_value"=>"5"}, "commit"=>"Create Car"}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCar Create (0.3ms)[0m  [1m[32mINSERT INTO "cars" ("year", "make", "model", "coolness_value", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["year", 1999], ["make", "Ford"], ["model", "Mustang"], ["coolness_value", 5], ["created_at", "2019-04-24 06:12:12.502096"], ["updated_at", "2019-04-24 06:12:12.502096"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://127.0.0.1/cars
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+Started GET "/cars" for 127.0.0.1 at 2019-04-23 23:12:12 -0700
+Processing by CarsController#index as HTML
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered cars/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.1ms)
+Started GET "/cars" for 127.0.0.1 at 2019-04-23 23:12:12 -0700
+Processing by CarsController#index as HTML
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered cars/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.7ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/cars/new" for 127.0.0.1 at 2019-04-23 23:12:49 -0700
+Processing by CarsController#new as HTML
+  Rendering cars/new.html.erb within layouts/application
+  Rendered cars/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 125ms (Views: 119.3ms | ActiveRecord: 0.0ms)
+Started POST "/cars" for 127.0.0.1 at 2019-04-23 23:12:49 -0700
+Processing by CarsController#create as HTML
+  Parameters: {"utf8"=>"✓", "car"=>{"year"=>"1999", "make"=>"Ford", "model"=>"Mustang", "coolness_value"=>"5"}, "commit"=>"Create Car"}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCar Create (0.3ms)[0m  [1m[32mINSERT INTO "cars" ("year", "make", "model", "coolness_value", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["year", 1999], ["make", "Ford"], ["model", "Mustang"], ["coolness_value", 5], ["created_at", "2019-04-24 06:12:49.413466"], ["updated_at", "2019-04-24 06:12:49.413466"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://127.0.0.1/cars
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+Started GET "/cars" for 127.0.0.1 at 2019-04-23 23:12:49 -0700
+Processing by CarsController#index as HTML
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered cars/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.1ms)
+Started GET "/cars" for 127.0.0.1 at 2019-04-23 23:12:49 -0700
+Processing by CarsController#index as HTML
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered cars/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/cars/new" for 127.0.0.1 at 2019-04-23 23:13:06 -0700
+Processing by CarsController#new as HTML
+  Rendering cars/new.html.erb within layouts/application
+  Rendered cars/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 129ms (Views: 123.1ms | ActiveRecord: 0.0ms)
+Started POST "/cars" for 127.0.0.1 at 2019-04-23 23:13:06 -0700
+Processing by CarsController#create as HTML
+  Parameters: {"utf8"=>"✓", "car"=>{"year"=>"1999", "make"=>"Ford", "model"=>"Mustang", "coolness_value"=>"5"}, "commit"=>"Create Car"}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCar Create (0.3ms)[0m  [1m[32mINSERT INTO "cars" ("year", "make", "model", "coolness_value", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["year", 1999], ["make", "Ford"], ["model", "Mustang"], ["coolness_value", 5], ["created_at", "2019-04-24 06:13:06.874707"], ["updated_at", "2019-04-24 06:13:06.874707"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://127.0.0.1/cars
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+Started GET "/cars" for 127.0.0.1 at 2019-04-23 23:13:06 -0700
+Processing by CarsController#index as HTML
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered cars/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.1ms)
+Started GET "/cars" for 127.0.0.1 at 2019-04-23 23:13:06 -0700
+Processing by CarsController#index as HTML
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered cars/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/cars/new" for 127.0.0.1 at 2019-04-23 23:15:51 -0700
+Processing by CarsController#new as HTML
+  Rendering cars/new.html.erb within layouts/application
+  Rendered cars/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 124ms (Views: 117.5ms | ActiveRecord: 0.0ms)
+Started POST "/cars" for 127.0.0.1 at 2019-04-23 23:15:52 -0700
+Processing by CarsController#create as HTML
+  Parameters: {"utf8"=>"✓", "car"=>{"year"=>"1999", "make"=>"Ford", "model"=>"Mustang", "coolness_value"=>"5"}, "commit"=>"Create Car"}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCar Create (0.3ms)[0m  [1m[32mINSERT INTO "cars" ("year", "make", "model", "coolness_value", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["year", 1999], ["make", "Ford"], ["model", "Mustang"], ["coolness_value", 5], ["created_at", "2019-04-24 06:15:52.034588"], ["updated_at", "2019-04-24 06:15:52.034588"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://127.0.0.1/cars
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+Started GET "/cars" for 127.0.0.1 at 2019-04-23 23:15:52 -0700
+Processing by CarsController#index as HTML
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered cars/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.1ms)
+Started GET "/cars" for 127.0.0.1 at 2019-04-23 23:15:52 -0700
+Processing by CarsController#index as HTML
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered cars/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/cars/new" for 127.0.0.1 at 2019-04-23 23:16:56 -0700
+Processing by CarsController#new as HTML
+  Rendering cars/new.html.erb within layouts/application
+  Rendered cars/new.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 208ms (Views: 201.9ms | ActiveRecord: 0.0ms)
+Started POST "/cars" for 127.0.0.1 at 2019-04-23 23:16:56 -0700
+Processing by CarsController#create as HTML
+  Parameters: {"utf8"=>"✓", "car"=>{"year"=>"1999", "make"=>"Ford", "model"=>"Mustang", "coolness_value"=>"5"}, "commit"=>"Create Car"}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCar Create (0.3ms)[0m  [1m[32mINSERT INTO "cars" ("year", "make", "model", "coolness_value", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["year", 1999], ["make", "Ford"], ["model", "Mustang"], ["coolness_value", 5], ["created_at", "2019-04-24 06:16:56.507266"], ["updated_at", "2019-04-24 06:16:56.507266"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://127.0.0.1/cars
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+Started GET "/cars" for 127.0.0.1 at 2019-04-23 23:16:56 -0700
+Processing by CarsController#index as HTML
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered cars/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.1ms)
+Started GET "/cars" for 127.0.0.1 at 2019-04-23 23:16:56 -0700
+Processing by CarsController#index as HTML
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered cars/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
