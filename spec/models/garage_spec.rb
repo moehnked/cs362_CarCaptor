@@ -7,6 +7,10 @@ RSpec.describe Garage do
 			test_garage = Garage.new
 			test_garage.add()
 			expect(test_garage.car_count).to eq(1)
+			test_garage.add()
+			expect(test_garage.car_count).to eq(2)
+			test_garage.add()
+			expect(test_garage.car_count).to eq(3)
 		end
 	end
 

@@ -1,11 +1,10 @@
 require "car"
 
 class Garage
-	attr_accessor :cars, :total_cars
+	attr_accessor :cars
 
 	def initialize
 		@cars = []
-		@total_cars = 0
 	end
 
 	def total_coolness
@@ -14,7 +13,6 @@ class Garage
 
 	def add(car = Car.new)
 		cars << car
-		total_cars += 1
 	end
 
 	def lame?
@@ -22,6 +20,6 @@ class Garage
 	end
 
 	def car_count
-		total_cars
+		cars.size
 	end
 end
