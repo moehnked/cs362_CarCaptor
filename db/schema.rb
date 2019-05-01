@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_24_190403) do
+ActiveRecord::Schema.define(version: 2019_05_01_180134) do
 
   create_table "cars", force: :cascade do |t|
     t.integer "year"
@@ -19,6 +19,9 @@ ActiveRecord::Schema.define(version: 2019_04_24_190403) do
     t.integer "coolness_value"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "horsepower"
+    t.integer "torque"
+    t.integer "weight"
   end
 
   create_table "users", force: :cascade do |t|
