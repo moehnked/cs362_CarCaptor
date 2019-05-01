@@ -18,6 +18,7 @@ class CreateCar
   
   def build
     self.car = Car.new(year: year, make: make, model: model, coolness_value: coolness_value, horsepower: horsepower, torque: torque, weight: weight)
+    car.calculate_power_to_weight_ratio
     car
   end
   
