@@ -8,7 +8,7 @@ class CarsController < ApplicationController
   end
   
   def create
-    @workflow = CreateCar.new(year: params[:car][:year], make: params[:car][:make], model: params[:car][:model], coolness_value: params[:car][:coolness_value])
+    @workflow = CreateCar.new(year: params[:car][:year], make: params[:car][:make], model: params[:car][:model], coolness_value: params[:car][:coolness_value], horsepower: params[:car][:horsepower], torque: params[:car][:torque], weight: params[:car][:weight])
     @workflow.create
     if @workflow.success?
       redirect_to cars_path
