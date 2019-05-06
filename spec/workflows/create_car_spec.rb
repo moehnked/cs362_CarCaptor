@@ -12,7 +12,7 @@ RSpec.describe CreateCar do
   
   describe "failure cases" do
     it "fails when trying to save a car with no year" do
-      creator = CreateCar.new(year: nil, make: "Ford", model: "Thing", coolness_value: 9)
+      creator = CreateCar.new(year: nil, make: "Ford", model: "Thing", coolness_value: 9, horsepower: 280, weight: 5000)
       creator.create
       expect(creator).not_to be_a_success
     end
