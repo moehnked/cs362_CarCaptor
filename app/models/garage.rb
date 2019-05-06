@@ -1,10 +1,12 @@
-require "car"
 
-class Garage
-	attr_accessor :cars
+class Garage < ApplicationRecord
+	belongs_to :user
+	has_many :cars
+	validates :cars, :user, :garage
 
-	def initialize
-		@cars = []
+	def new(user: User.new)
+		@garage = Garage.new
+
 	end
 
 	def total_coolness

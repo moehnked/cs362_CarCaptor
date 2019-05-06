@@ -1,7 +1,7 @@
 class CreateUser
 attr_accessor :username, :password, :email, :garage, :user
   
-  def initialize(username: "new_user", password: "password", email: "example@gmail.com")
+  def initialize(username: "new_user", password: "password", email: "example@gmail.com", garage: CreateGarage.new())
     @username = username
     @password = password
     @email = email
