@@ -8,6 +8,12 @@ RSpec.describe Car do
     expect(creator.car.coolness_value).to be >= 0
   end
   
+  it "sets coolness value properly" do
+    creator = CreateCar.new(year: 1997, make: "Ford", model: "Thing", coolness_value: 9, horsepower: 2000, torque: 2000, weight: 5000)
+    creator.build
+    expect(creator.car.coolness_value).to have_coolness_value_of(9)
+  end
+  
   it "calculates power-to-weight ratio properly" do
     creator = CreateCar.new(year: 1997, make: "Ford", model: "Thing", coolness_value: 9, horsepower: 2000, torque: 2000, weight: 5000)
     creator.build
