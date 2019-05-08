@@ -1,34 +1,30 @@
-require "rails_helper"
+require 'rails_helper'
 
-RSpec.describe Garage do
+RSpec.describe Garage, type: :model do
+  let(:garage) do
+        garage = Garage.new
+        garage.setup
 
-	describe "adding cars" do
-		it "keeps a total of the number of cars" do
-			test_garage = Garage.new
-			test_garage.add()
-			expect(test_garage.car_count).to eq(1)
-			test_garage.add()
-			expect(test_garage.car_count).to eq(2)
-			test_garage.add()
-			expect(test_garage.car_count).to eq(3)
-		end
-	end
+        it "expects a new garage to have no cars" do
+        	expect(garage.cars.length).to eq(0) 
+        end
 
-	describe "happy path" do
-		let(:garage) { Garage.new }
-		let(:car) { Car.new }
+        it "expects a garage with no cars to be lame" do
+        	expect(garage).to be_lame
+        end
 
-		it "considers a garage with no cars to be lame", :skip do
-			expect(garage).to be_lame
-		end
+        describe "adding cars" do
+        	it "keeps track of the number of cars added" do
+        		garage.add(Car.new)
+        		expect(garage.cars.length).to eq(1)
+                garage.add
+                expect(garage.cars.length).to eq(2)
+                expect(garage.count_cars).to eq(2)
+        	end
 
-		it "considers a garage with cars to be lame if their total coolness is zero", :skip do
-			garage.cars << car
-			expect(garage.total_coolness).to eq(1)
-		end
-	end
-
-	describe "unhappy path" do
-
-	end
+          it "expects a garage with at least one car with a positive coolness value to not be lame" do
+            expect(garage).to_not be_lame
+          end
+        end
+    end
 end

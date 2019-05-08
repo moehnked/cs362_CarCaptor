@@ -10,18 +10,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_01_180134) do
+ActiveRecord::Schema.define(version: 2019_05_08_164303) do
 
   create_table "cars", force: :cascade do |t|
     t.integer "year"
     t.string "make"
     t.string "model"
     t.integer "coolness_value"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
     t.integer "horsepower"
     t.integer "torque"
     t.integer "weight"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "garages", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "capacity"
+    t.integer "car_count"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_garages_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

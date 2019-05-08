@@ -12,5 +12,9 @@ RSpec.describe "adding a user", type: :system do
 		expect(page).to have_selector("#user_#{@user.id} .username", text: "Dalton")
     	expect(page).to have_selector("#user_#{@user.id} .password", text: "bigpass123")
     	expect(page).to have_selector("#user_#{@user.id} .email", text: "example@gmail.com")
+    	visit user_path(@user)
+    	expect(page).to have_content("Dalton")
+    	expect(page).to have_content("example@gmail.com")
+    	expect(page).to have_content("1")
 	end
 end

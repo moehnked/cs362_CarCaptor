@@ -5,6 +5,9 @@ class CreateCars < ActiveRecord::Migration[5.2]
       t.string :make
       t.string :model
       t.integer :coolness_value
+      t.integer :horsepower
+      t.integer :torque
+      t.integer :weight
 
       t.timestamps
     end

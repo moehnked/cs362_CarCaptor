@@ -1,25 +1,28 @@
-require "car"
-
-class Garage
+class Garage < ApplicationRecord
+  	belongs_to :user
+	has_many :car
 	attr_accessor :cars
 
-	def initialize
+	def setup(params)
+		self.user = params.fetch(:user, User.new)
+		self.capacity = params.fetch(:capacity, 1)
 		@cars = []
+		self.car_count = 0
 	end
 
 	def total_coolness
-		cars.sum(&:coolness_value)
+	 	cars.sum(:coolness_value)
 	end
 
 	def add(car = Car.new)
-		cars << car
+	 	cars << car
 	end
 
 	def lame?
-		cars.empty?
+	 	cars.empty?
 	end
 
-	def car_count
-		cars.size
+	def count_cars
+	 	cars.size
 	end
 end

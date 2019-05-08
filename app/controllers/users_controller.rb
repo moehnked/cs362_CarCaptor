@@ -7,14 +7,22 @@ class UsersController < ApplicationController
 		@users = User.all
 	end
 
+	def show
+		@user = User.find(params[:id])
+	end
+
 	def create
-	    @workflow = CreateUser.new(username: params[:user][:username], password: params[:user][:password], email: params[:user][:email])
-	    @workflow.create
-	    if @workflow.success?
-	      redirect_to users_path
-	    else
-	      @user = @workflow.user
-	      render :new
-	    end
+		user = User.create(
+			username: params[:user][:username], 
+			password: params[:user][:password], 
+			email: params[:user][:email])
+		user.garage = Garage.create(user: user)
+		user.garage.setup(user: user)
+		user.garage.save 
+		if user.save
+			redirect_to user_path(user)
+		else
+			render :new
+		end
 	end
 end
