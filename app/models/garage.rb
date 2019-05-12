@@ -3,7 +3,7 @@ class Garage < ApplicationRecord
 	has_many :car
 	attr_accessor :cars
 
-	def setup(params)
+	def setup(params = {})
 		self.user = params.fetch(:user, User.new)
 		self.capacity = params.fetch(:capacity, 1)
 		@cars = []
