@@ -23,7 +23,7 @@ RSpec.describe Car, type: :model do
     it "a car with a higher power-to-weight ratio should win a drag race" do
       car1 = FactoryBot.create(:car, year: 1997, make: "Ford", model: "High Ratio", coolness_value: 9, horsepower: 2000, torque: 2000, weight: 5000)
       car2 = FactoryBot.create(:car, year: 1997, make: "Ford", model: "Low Ratio", coolness_value: 9, horsepower: 200, torque: 200, weight: 5000)
-      expect(car1.car.does_opponent_win_simple_drag_race?(car2.car)).to be false
+      expect(car1.does_opponent_win_simple_drag_race?(car2)).to be false
     end
 
     it "expects setup to alter default parameters of an already defaulted car" do
@@ -51,6 +51,7 @@ RSpec.describe Car, type: :model do
         horsepower: 160,
         torque: 225,
         weight: 3891 )
-      expect(car.calculate_power_to_weight_ratio).to eq(0.0411)
+      pwr_expected = 160.fdiv(3891)
+      expect(car.calculate_power_to_weight_ratio).to eq(pwr_expected)
     end
 end
