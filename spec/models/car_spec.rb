@@ -17,7 +17,7 @@ RSpec.describe Car, type: :model do
     it "calculates power-to-weight ratio properly" do
       car2 = FactoryBot.create(:car, year: 1997, make: "Ford", model: "Thing", coolness_value: 9, horsepower: 2000, torque: 2000, weight: 5000)
       pwr_expected = 2000.fdiv(5000)
-      expect(creator.car.power_weight_ratio).to eq(pwr_expected)
+      expect(car2.calculate_power_to_weight_ratio).to eq(pwr_expected)
     end
 
     it "a car with a higher power-to-weight ratio should win a drag race" do
