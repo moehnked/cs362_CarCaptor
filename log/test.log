@@ -10318,3 +10318,223 @@ Processing by UsersController#show as HTML
   Rendered users/show.html.erb within layouts/application (1.0ms)
 Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.2ms)
   [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/cars/new" for 127.0.0.1 at 2019-05-13 11:26:54 -0700
+Processing by CarsController#new as HTML
+  Rendering cars/new.html.erb within layouts/application
+  Rendered cars/new.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 202ms (Views: 195.8ms | ActiveRecord: 0.0ms)
+Started POST "/cars" for 127.0.0.1 at 2019-05-13 11:26:54 -0700
+Processing by CarsController#create as HTML
+  Parameters: {"utf8"=>"✓", "car"=>{"year"=>"1999", "make"=>"Ford", "model"=>"Mustang", "coolness_value"=>"5", "horsepower"=>"260", "torque"=>"302", "weight"=>"3273"}, "commit"=>"Create Car"}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCar Create (0.3ms)[0m  [1m[32mINSERT INTO "cars" ("year", "make", "model", "coolness_value", "horsepower", "torque", "weight", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["year", 1999], ["make", "Ford"], ["model", "Mustang"], ["coolness_value", 5], ["horsepower", 260], ["torque", 302], ["weight", 3273], ["created_at", "2019-05-13 18:26:54.406466"], ["updated_at", "2019-05-13 18:26:54.406466"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://127.0.0.1/cars
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms)
+Started GET "/cars" for 127.0.0.1 at 2019-05-13 11:26:54 -0700
+Processing by CarsController#index as HTML
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered cars/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.1ms)
+Started GET "/cars" for 127.0.0.1 at 2019-05-13 11:26:54 -0700
+Processing by CarsController#index as HTML
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered cars/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.1ms)
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."model" = ? LIMIT ?[0m  [["model", "Mustang"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/cars/new" for 127.0.0.1 at 2019-05-13 11:26:54 -0700
+Processing by CarsController#new as HTML
+  Rendering cars/new.html.erb within layouts/application
+  Rendered cars/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms)
+Started POST "/cars" for 127.0.0.1 at 2019-05-13 11:26:54 -0700
+Processing by CarsController#create as HTML
+  Parameters: {"utf8"=>"✓", "car"=>{"year"=>"1999", "make"=>"Ford", "model"=>"Mustang", "coolness_value"=>"5", "horsepower"=>"260", "torque"=>"302", "weight"=>"3273"}, "commit"=>"Create Car"}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCar Create (0.2ms)[0m  [1m[32mINSERT INTO "cars" ("year", "make", "model", "coolness_value", "horsepower", "torque", "weight", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["year", 1999], ["make", "Ford"], ["model", "Mustang"], ["coolness_value", 5], ["horsepower", 260], ["torque", 302], ["weight", 3273], ["created_at", "2019-05-13 18:26:54.440336"], ["updated_at", "2019-05-13 18:26:54.440336"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://127.0.0.1/cars
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+Started GET "/cars" for 127.0.0.1 at 2019-05-13 11:26:54 -0700
+Processing by CarsController#index as HTML
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered cars/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.1ms)
+Started GET "/users/new" for 127.0.0.1 at 2019-05-13 11:26:54 -0700
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.0ms)
+Started POST "/users" for 127.0.0.1 at 2019-05-13 11:26:54 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"username"=>"Dalton", "password"=>"[FILTERED]", "email"=>"example@gmail.com"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGarage Create (0.2ms)[0m  [1m[32mINSERT INTO "garages" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2019-05-13 18:26:54.461144"], ["updated_at", "2019-05-13 18:26:54.461144"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "password", "email", "garage_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["username", "Dalton"], ["password", "bigpass123"], ["email", "example@gmail.com"], ["garage_id", 1], ["created_at", "2019-05-13 18:26:54.462532"], ["updated_at", "2019-05-13 18:26:54.462532"]]
+  [1m[36mGarage Update (0.1ms)[0m  [1m[33mUPDATE "garages" SET "user_id" = ?, "capacity" = ?, "car_count" = ?, "updated_at" = ? WHERE "garages"."id" = ?[0m  [["user_id", 1], ["capacity", 1], ["car_count", 0], ["updated_at", "2019-05-13 18:26:54.463226"], ["id", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://127.0.0.1/users/1
+Completed 302 Found in 6ms (ActiveRecord: 0.8ms)
+Started GET "/users/1" for 127.0.0.1 at 2019-05-13 11:26:54 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mGarage Load (0.1ms)[0m  [1m[34mSELECT  "garages".* FROM "garages" WHERE "garages"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOwnedcar Load (0.1ms)[0m  [1m[34mSELECT "ownedcars".* FROM "ownedcars" WHERE "ownedcars"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.4ms)
+Started GET "/users" for 127.0.0.1 at 2019-05-13 11:26:54 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mGarage Load (0.1ms)[0m  [1m[34mSELECT  "garages".* FROM "garages" WHERE "garages"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered users/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Dalton"], ["LIMIT", 1]]
+Started GET "/users/1" for 127.0.0.1 at 2019-05-13 11:26:54 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mGarage Load (0.0ms)[0m  [1m[34mSELECT  "garages".* FROM "garages" WHERE "garages"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOwnedcar Load (0.0ms)[0m  [1m[34mSELECT "ownedcars".* FROM "ownedcars" WHERE "ownedcars"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.2ms)
+Started GET "/users/1/add" for 127.0.0.1 at 2019-05-13 11:26:54 -0700
+Processing by UsersController#add as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/add.html.erb within layouts/application
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  Rendered users/add.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 0.2ms)
+Started POST "/ownedcars" for 127.0.0.1 at 2019-05-13 11:26:54 -0700
+Processing by OwnedcarsController#create as HTML
+  Parameters: {"utf8"=>"✓", "car_id"=>"1", "user_id"=>"1", "commit"=>"Create Ownedcar"}
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mOwnedcar Create (0.2ms)[0m  [1m[32mINSERT INTO "ownedcars" ("year", "make", "model", "coolness_value", "horsepower", "torque", "weight", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["year", 1999], ["make", "Ford"], ["model", "Mustang"], ["coolness_value", 5], ["horsepower", 260], ["torque", 302], ["weight", 3273], ["user_id", 1], ["created_at", "2019-05-13 18:26:54.496020"], ["updated_at", "2019-05-13 18:26:54.496020"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://127.0.0.1/users/1
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms)
+Started GET "/users/1" for 127.0.0.1 at 2019-05-13 11:26:54 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mGarage Load (0.1ms)[0m  [1m[34mSELECT  "garages".* FROM "garages" WHERE "garages"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOwnedcar Load (0.0ms)[0m  [1m[34mSELECT "ownedcars".* FROM "ownedcars" WHERE "ownedcars"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.2ms)
+Started GET "/users/1" for 127.0.0.1 at 2019-05-13 11:26:54 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mGarage Load (0.0ms)[0m  [1m[34mSELECT  "garages".* FROM "garages" WHERE "garages"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOwnedcar Load (0.0ms)[0m  [1m[34mSELECT "ownedcars".* FROM "ownedcars" WHERE "ownedcars"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/users/new" for 127.0.0.1 at 2019-05-13 11:26:54 -0700
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+Started POST "/users" for 127.0.0.1 at 2019-05-13 11:26:54 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"username"=>"Dalton", "password"=>"[FILTERED]", "email"=>"example@gmail.com"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGarage Create (0.3ms)[0m  [1m[32mINSERT INTO "garages" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2019-05-13 18:26:54.521580"], ["updated_at", "2019-05-13 18:26:54.521580"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "password", "email", "garage_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["username", "Dalton"], ["password", "bigpass123"], ["email", "example@gmail.com"], ["garage_id", 1], ["created_at", "2019-05-13 18:26:54.523097"], ["updated_at", "2019-05-13 18:26:54.523097"]]
+  [1m[36mGarage Update (0.1ms)[0m  [1m[33mUPDATE "garages" SET "user_id" = ?, "capacity" = ?, "car_count" = ?, "updated_at" = ? WHERE "garages"."id" = ?[0m  [["user_id", 1], ["capacity", 1], ["car_count", 0], ["updated_at", "2019-05-13 18:26:54.523765"], ["id", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://127.0.0.1/users/1
+Completed 302 Found in 6ms (ActiveRecord: 0.9ms)
+Started GET "/users/1" for 127.0.0.1 at 2019-05-13 11:26:54 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mGarage Load (0.0ms)[0m  [1m[34mSELECT  "garages".* FROM "garages" WHERE "garages"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOwnedcar Load (0.0ms)[0m  [1m[34mSELECT "ownedcars".* FROM "ownedcars" WHERE "ownedcars"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.2ms)
+Started GET "/users" for 127.0.0.1 at 2019-05-13 11:26:54 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mGarage Load (0.1ms)[0m  [1m[34mSELECT  "garages".* FROM "garages" WHERE "garages"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered users/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Dalton"], ["LIMIT", 1]]
+Started GET "/users/1" for 127.0.0.1 at 2019-05-13 11:26:54 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mGarage Load (0.2ms)[0m  [1m[34mSELECT  "garages".* FROM "garages" WHERE "garages"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOwnedcar Load (0.1ms)[0m  [1m[34mSELECT "ownedcars".* FROM "ownedcars" WHERE "ownedcars"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
