@@ -1,0 +1,21 @@
+<h1>All Owned Cars</h1>
+<table>
+  <thead>
+    <tr>
+      <td>Owner</td>
+      <td>Year</td>
+      <td>Make</td>
+      <td>Model</td>
+    </tr>
+  </thead>
+  <tbody>
+    <% @ownedcars.each do |c| %>
+      <tr class="ownedcar-row" id="<%= dom_id(c) %>">
+        <td class="owner"><%= c.user %></td>
+        <td class="year"><%= c.year %></td>
+        <td class="make"><%= c.make %></td>
+        <td class="model"><%= c.model %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

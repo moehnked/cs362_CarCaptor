@@ -7,6 +7,12 @@ class UsersController < ApplicationController
 		@users = User.all
 	end
 
+	def add
+		@cars = Car.all
+		@ownedcar = Ownedcar.new
+		@user = User.find(params[:id])
+	end
+
 	def show
 		@user = User.find(params[:id])
 	end

@@ -15,6 +15,5 @@ RSpec.describe "adding a user", type: :system do
     	visit user_path(@user)
     	expect(page).to have_content("Dalton")
     	expect(page).to have_content("example@gmail.com")
-    	expect(page).to have_content("1")
 	end
 end
