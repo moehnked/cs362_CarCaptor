@@ -54,4 +54,9 @@ RSpec.describe Car, type: :model do
       pwr_expected = 160.fdiv(3891)
       expect(car.calculate_power_to_weight_ratio).to eq(pwr_expected)
     end
+
+    it "can perform a big dependency" do
+      car_for_dep = FactoryBot.create(:car, year: 1997, make: "Ford", model: "Thing", coolness_value: 9, horsepower: 2000, torque: 2000, weight: 5000)
+      expect(car_for_dep.perform(BigDependency.new)).to eq(1)
+    end
 end
