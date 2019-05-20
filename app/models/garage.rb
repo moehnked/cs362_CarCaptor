@@ -25,4 +25,9 @@ class Garage < ApplicationRecord
 	def count_cars
 	 	cars.size
 	end
+
+	def perform(big_dependency)
+    	big_dependency.execute
+    	return 42
+    end
 end

@@ -25,4 +25,24 @@ RSpec.describe Garage, type: :model do
         expect(garage).to_not be_lame
       end
     end
+
+    # describe "slow test" do
+    #     it "can make a call to a contrived dependancy" do
+    #         expect(garage.perform(BigDependency.new)).to eq(42)
+    #     end
+    # end
+
+    describe "faster test" do
+        it "can make a thing respond to execute in place of a real BigDependency object" do
+            mockBigDependency = BigDependency.new
+            #this will override the method execute in our mock object to only return 42, essentially skipping the sleep(5)
+            allow(mockBigDependency).to receive(:execute).and_return(42)
+            #this allows us to change the behavior of a class without the cumbersome convolution of subclass and override
+            #the class is unaffected, as an alternate object of the same class created later will still maintain the original response to execute, sleep and all
+        #    othermockBigDependency = BigDependency.new
+            #alternating between the two mocks verifies this
+
+            expect(garage.perform(mockBigDependency)).to eq(42)
+        end
+    end
 end
